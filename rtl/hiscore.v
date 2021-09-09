@@ -410,7 +410,7 @@ begin
 					// Compare process states
 					SM_COMPAREINIT: // Initialise state machine for comparison 
 						begin
-							// Setup addresses and comparison flags
+							// Setup addreses and comparison flags
 							buffer_addr <= 0;
 							data_addr <= 0;
 							counter <= 0;
@@ -542,6 +542,7 @@ begin
 							end
 							else
 							begin
+								extracting_dump <= 1'b0;
 								state <= SM_STOPPED;
 							end
 						end
